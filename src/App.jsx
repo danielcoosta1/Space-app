@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import GlobalStyle from "./components/EstilosGlobais"
-
+import Cabecalho from "./components/Cabecalho";
 const FundoGradiente = styled.div`
   background: linear-gradient(
     174.61deg,
@@ -8,19 +7,15 @@ const FundoGradiente = styled.div`
     #04244f 48%,
     #154580 96.76%
   );
-  
+
   width: 100vw;
   min-height: 100vh;
 `;
 
-
-
 function App() {
-  return (
-    <FundoGradiente>
-      <GlobalStyle/>
-    </FundoGradiente>
-  );
+  return <FundoGradiente>
+    <Cabecalho />
+  </FundoGradiente>;
 }
 
 export default App;
