@@ -1,18 +1,23 @@
 import styled from "styled-components";
 
-const AsideEstilizado = styled.aside``;
+const AsideEstilizado = styled.aside`
+  width: 18rem;
+`;
 
-const NavEstilizado = styled.nav``;
+const NavEstilizado = styled.nav`
+`;
 
 const ListaEstilizada = styled.ul`
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  color:#D9D9D9;
+
+
+  
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  width: 14rem;
+  gap: 1.5rem;
+ 
 `;
 
-const ItemListaEstilizado = styled.li``;
-
-export { AsideEstilizado, NavEstilizado, ListaEstilizada, ItemListaEstilizado };
+export { AsideEstilizado, NavEstilizado, ListaEstilizada };
