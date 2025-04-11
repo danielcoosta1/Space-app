@@ -1,5 +1,7 @@
 import { AsideEstilizado, NavEstilizado, ListaEstilizada } from "./styles";
 
+import { useState } from "react";
+
 import ItemNavegacao from "../ItemNavegacao";
 
 import homeInativo from "/icones/home-inativo.png";
@@ -18,31 +20,49 @@ import surpreendaMeInativo from "/icones/surpreenda-me-inativo.png";
 import surpreendaMeAtivo from "/icones/surpreenda-me-ativo.png";
 
 const BarraLateral = () => {
+  const [itemAtivo, setItemAtivo] = useState("home");
+
   return (
     <AsideEstilizado>
       <NavEstilizado>
         <ListaEstilizada>
-          <ItemNavegacao $bgAtivo={homeAtivo} $bgInativo={homeInativo} ativo>
+          <ItemNavegacao
+            srcAtivo={homeAtivo}
+            srcInativo={homeInativo}
+            ativo={itemAtivo === "home"}
+            onClick={() => setItemAtivo("home")}
+          >
             Home
           </ItemNavegacao>
           <ItemNavegacao
-            $bgAtivo={maisVistasAtivo}
-            $bgInativo={maisVistasInativo}
+            srcAtivo={maisVistasAtivo}
+            srcInativo={maisVistasInativo}
+            ativo={itemAtivo === "maisVistas"}
+            onClick={() => setItemAtivo("maisVistas")}
           >
             Mais vistas
           </ItemNavegacao>
           <ItemNavegacao
-            $bgAtivo={maisCurtidasAtivo}
-            $bgInativo={maisCurtidasInativo}
+            srcAtivo={maisCurtidasAtivo}
+            srcInativo={maisCurtidasInativo}
+            ativo={itemAtivo === "maisCurtidas"}
+            onClick={() => setItemAtivo("maisCurtidas")}
           >
             Mais curtidas
           </ItemNavegacao>
-          <ItemNavegacao $bgAtivo={novasAtivo} $bgInativo={novasInativo} ativo>
+          <ItemNavegacao
+            srcAtivo={novasAtivo}
+            srcInativo={novasInativo}
+            ativo={itemAtivo === "novas"}
+            onClick={() => setItemAtivo("novas")}
+          >
             Novas
           </ItemNavegacao>
           <ItemNavegacao
-            $bgAtivo={surpreendaMeAtivo}
-            $bgInativo={surpreendaMeInativo}
+            srcAtivo={surpreendaMeAtivo}
+            srcInativo={surpreendaMeInativo}
+            ativo={itemAtivo === "surpreendaMe"}
+            onClick={() => setItemAtivo("surpreendaMe")}
           >
             Surpreenda-me
           </ItemNavegacao>

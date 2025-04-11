@@ -1,19 +1,10 @@
 import { ItemListaEstilizado } from "./styles";
 
-import { useState } from "react";
-
-const ItemNavegacao = ({ children, $bgAtivo, $bgInativo }) => {
-  const [ativo, setAtivo] = useState(false);
-
-  const handleClick = (ativo) => {
-    ativo = !ativo;
-    setAtivo(ativo);
-  };
-
+const ItemNavegacao = ({ children, onClick, srcAtivo, srcInativo, ativo = false }) => {
   return (
-    <ItemListaEstilizado>
-      <img src={ativo ? $bgAtivo : $bgInativo} />
-      <a onClick={handleClick}>{children}</a>
+    <ItemListaEstilizado $bgAtivo={ativo} onClick={onClick}>
+      <img src={ativo ? srcAtivo : srcInativo} />
+      {children}
     </ItemListaEstilizado>
   );
 };
