@@ -1,20 +1,17 @@
-
-import { HeaderEstilizado, ImgEstilizado, InputEstilizado } from "./styles"
-
-import logoImg from "/imagens/logo.png"
+import { HeaderEstilizado, ConteinerInput } from "./styles";
+import searchImg from "/icones/search.png";
+import logoImg from "/imagens/logo.png";
 
 const Cabecalho = () => {
-    return (
-        <HeaderEstilizado>
-            <ImgEstilizado src={logoImg}/>
-            <div>
-            <InputEstilizado placeholder="O que você procura ?"/>
-            
+  return (
+    <HeaderEstilizado>
+      <img src={logoImg} alt="Logo principal do" />
+      <ConteinerInput>
+        <input placeholder="O que você procura ?" />
+        <img src={searchImg} />
+      </ConteinerInput>
+    </HeaderEstilizado>
+  );
+};
 
-            </div>
-           
-        </HeaderEstilizado>
-    )
-}
-
-export default Cabecalho
+export default Cabecalho;

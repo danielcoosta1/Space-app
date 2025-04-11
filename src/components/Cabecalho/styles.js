@@ -1,26 +1,44 @@
 import styled from "styled-components";
 
 const HeaderEstilizado = styled.header`
-display: flex;
-padding: 3.5rem 0;
-justify-content: space-between;
-width: 100vw;
+  display: flex;
+  padding: 3.5rem 0;
+  justify-content: space-between;
+  width: 100vw;
+  align-items: center;
 
-img {
-    max-width: 16rem;
-}
-
-input {
-    width: 30%;
-    padding: 12px 16px;
-}
-
-
-
+  img {
+    max-width: 14rem;
+  }
 `;
 
-const ImgEstilizado = styled.img``;
+const ConteinerInput = styled.div`
+  position: relative;
 
-const InputEstilizado = styled.input``;
+  input {
+    height: 3.5rem;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    border: 2px solid;
+    border-color: #c98cf1;
+    background: transparent;
+    box-sizing: border-box;
+    width: 35rem;
+    color: #d9d9d9;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 20px;
 
-export { HeaderEstilizado, ImgEstilizado, InputEstilizado };
+    flex: 1 1 100%;
+  }
+
+  img {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 38px;
+    height: 38px;
+  }
+`;
+
+export { HeaderEstilizado, ConteinerInput };
