@@ -1,23 +1,22 @@
-import styled from "styled-components";
 import Cabecalho from "./components/Cabecalho";
 import BarraLateral from "./components/BarraLateral";
-const FundoGradiente = styled.div`
-  background: linear-gradient(
-    174.61deg,
-    #041833 4.16%,
-    #04244f 48%,
-    #154580 96.76%
-  );
+import Banner from "./components/Banner";
 
-  width: 100vw;
-  min-height: 100vh;
-`;
+import { FundoGradiente } from "./Styles";
+
+
+import backGroundImage from "../src/assets/banner.png";
 
 function App() {
-  return <FundoGradiente>
-    <Cabecalho />
-    <BarraLateral/>
-  </FundoGradiente>;
+  return (
+    <FundoGradiente>
+      <Cabecalho />
+      <BarraLateral />
+      <Banner backGroundImage={backGroundImage}>
+        A galeria mais completa de fotos do espaço!
+      </Banner>
+    </FundoGradiente>
+  );
 }
 
 export default App;
