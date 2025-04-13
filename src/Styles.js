@@ -12,10 +12,15 @@ const FundoGradiente = styled.div`
   min-height: 100vh;
 `;
 
-const AppConteiner = styled.main`
+const AppConteiner = styled.section`
   width: 1440px;
   max-width: 100%;
   margin: 0 auto;
 `;
 
-export { FundoGradiente, AppConteiner};
+const MainConteiner = styled.main`
+display: flex;
+gap: 2rem;
+`;
+
+export { FundoGradiente, AppConteiner, MainConteiner};
