@@ -4,7 +4,7 @@ const HeaderEstilizado = styled.header`
   display: flex;
   padding: 3.5rem 0;
   justify-content: space-between;
-  width: 100vw;
+
   align-items: center;
 
   img {
