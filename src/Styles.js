@@ -23,4 +23,12 @@ display: flex;
 gap: 2rem;
 `;
 
-export { FundoGradiente, AppConteiner, MainConteiner};
+const ConteinerWrapper = styled.div`
+display: flex;
+flex-direction: column;
+flex-grow: 1;
+
+`;
+
+
+export { FundoGradiente, AppConteiner, MainConteiner, ConteinerWrapper};
