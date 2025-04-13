@@ -12,7 +12,10 @@ const FundoGradiente = styled.div`
   min-height: 100vh;
 `;
 
-const AppConteiner = styled;div``;
+const AppConteiner = styled.main`
+  width: 1440px;
+  max-width: 100%;
+  margin: 0 auto;
+`;
 
-
-export {FundoGradiente}
+export { FundoGradiente, AppConteiner};
