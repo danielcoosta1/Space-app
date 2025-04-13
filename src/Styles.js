@@ -19,16 +19,14 @@ const AppConteiner = styled.section`
 `;
 
 const MainConteiner = styled.main`
-display: flex;
-gap: 2rem;
+  display: flex;
+  gap: 2rem;
 `;
 
 const ConteinerWrapper = styled.div`
-display: flex;
-flex-direction: column;
-flex-grow: 1;
-
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 `;
 
-
-export { FundoGradiente, AppConteiner, MainConteiner, ConteinerWrapper};
+export { FundoGradiente, AppConteiner, MainConteiner, ConteinerWrapper };

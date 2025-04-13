@@ -14,13 +14,12 @@ const FigureEstilizado = styled.figure`
 `;
 
 const TituloEstilizado = styled.h1`
-
-font-weight: 400;
-font-size:35px;
-line-height: 48px;
-color:#FFFFFF;
-max-width: 350px;
-padding: 0 64px;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 48px;
+  color: #ffffff;
+  max-width: 350px;
+  padding: 0 64px;
 `;
 
 export { FigureEstilizado, TituloEstilizado };
