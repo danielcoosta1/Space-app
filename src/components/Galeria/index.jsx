@@ -1,6 +1,6 @@
 import Tags from "./Tags";
 import Populares from "./Populares";
-import { GaleriaConteiner, SecaoFluida, GridFotos } from "./styles";
+import { GaleriaConteiner, SecaoFluida, GridFotos, CardFoto, DivInfo } from "./styles";
 import tags from "./Tags/tags.json";
 import { useState } from "react";
 
@@ -26,17 +26,22 @@ const Galeria = ({ fotos }) => {
           <h1>Navegue pela galeria</h1>
           <GridFotos>
             {fotosFiltradas.map((foto) => (
-              <div key={foto.id} className="card-foto">
+              <CardFoto key={foto.id} >
                 <img
                   src={foto.path}
                   alt={foto.titulo}
-                  className="imagem-foto"
                 />
-                <div className="info-foto">
-                  <h3>{foto.titulo}</h3>
-                  <p>Fonte: {foto.fonte}</p>
-                </div>
-              </div>
+                <DivInfo>
+                  <div>
+                    <h3>{foto.titulo}</h3>
+                    <p>Fonte: {foto.fonte}</p>
+                  </div>
+                  <div>
+
+                  </div>
+
+                </DivInfo>
+              </CardFoto>
             ))}
           </GridFotos>
         </SecaoFluida>

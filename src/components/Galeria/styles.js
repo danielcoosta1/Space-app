@@ -18,10 +18,35 @@ const SecaoFluida = styled.div`
 const GridFotos = styled.div`
   max-width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   padding: 2rem 0;
-
-
+  gap: 2rem;
 `;
 
-export { GaleriaConteiner, SecaoFluida, GridFotos };
+const CardFoto = styled.div`
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  &:hover {
+    transform: translateY(-5px);
+  }
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+`;
+
+const DivInfo = styled.div`
+  color: #ffffff;
+  background: #001634;
+
+  h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    color: #d9d9d9;
+    font-size: 0.9rem;
+  }
+`;
+
+export { GaleriaConteiner, SecaoFluida, GridFotos, CardFoto, DivInfo };
