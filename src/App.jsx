@@ -12,12 +12,9 @@ import {
 import backGroundImage from "../src/assets/banner.png";
 import Galeria from "./components/Galeria";
 
-import fotos from "./fotos.json"
+import fotos from "./fotos.json";
 
 const App = () => {
-
-
-
   return (
     <FundoGradiente>
       <AppConteiner>
@@ -28,14 +25,12 @@ const App = () => {
             <Banner backGroundImage={backGroundImage}>
               A galeria mais completa de fotos do espaço!
             </Banner>
-            <Galeria
-              fotos={fotos}
-            />
+            <Galeria fotos={fotos} />
           </ConteinerWrapper>
         </MainConteiner>
       </AppConteiner>
     </FundoGradiente>
   );
-}
+};
 
 export default App;
