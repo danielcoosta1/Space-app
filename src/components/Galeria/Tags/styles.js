@@ -4,9 +4,10 @@ const ConteinerTag = styled.section`
   display: flex;
   align-items: center;
   gap: 5rem;
+  margin: 3rem 0;
 
   p {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: #d9d9d9;
   }
 `;
