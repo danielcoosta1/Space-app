@@ -12,7 +12,14 @@ import {
 import backGroundImage from "../src/assets/banner.png";
 import Galeria from "./components/Galeria";
 
-function App() {
+import fotos from "./fotos.json"
+import { useState } from "react";
+
+
+const App = () => {
+
+  const [fotosGaleria, setFotosGaleria] =  useState(fotos);
+
   return (
     <FundoGradiente>
       <AppConteiner>
@@ -23,7 +30,9 @@ function App() {
             <Banner backGroundImage={backGroundImage}>
               A galeria mais completa de fotos do espaço!
             </Banner>
-            <Galeria />
+            <Galeria
+            fotos={fotosGaleria}
+             />
           </ConteinerWrapper>
         </MainConteiner>
       </AppConteiner>
