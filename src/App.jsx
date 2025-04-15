@@ -1,6 +1,7 @@
 import Cabecalho from "./components/Cabecalho";
 import BarraLateral from "./components/BarraLateral";
 import Banner from "./components/Banner";
+import Rodape from "./components/Rodape";
 
 import {
   FundoGradiente,
@@ -13,6 +14,8 @@ import backGroundImage from "../src/assets/banner.png";
 import Galeria from "./components/Galeria";
 
 import fotos from "./fotos.json";
+
+
 
 const App = () => {
   return (
@@ -29,6 +32,7 @@ const App = () => {
           </ConteinerWrapper>
         </MainConteiner>
       </AppConteiner>
+      <Rodape/>
     </FundoGradiente>
   );
 };
