@@ -7,11 +7,16 @@ const Footer = styled.footer`
     padding: 1.5rem 0;
     background-color: #04244F;
 
+    p{
+        color: #FFFFFF;
+        font-size: 1rem;
+    }
+
 `;
 
 const RedesSociais = styled.div`
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
 `;
 
 const Img = styled.img``;
