@@ -24,7 +24,7 @@ const ModalAmpliar = ({ foto, onClose, onFavoritar, isFavorito }) => {
           </div>
           
           <IconeWrapper 
-            onClick={() => onFavoritar(foto.id)}
+            onClick={() => onFavoritar(foto)}
             $favoritado={isFavorito}
             aria-label={isFavorito ? "Desfavoritar" : "Favoritar"}
           >

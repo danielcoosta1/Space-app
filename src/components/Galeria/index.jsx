@@ -26,15 +26,24 @@ const Galeria = ({ fotos }) => {
     setTagSelecionada((prev) => (prev === tag.id ? null : tag.id));
   };
 
-  const handleFavoritar = (id) => {
-    setFavoritos((prev) =>
-      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
-    );
+  const handleFavoritar = (foto) => {
+    setFavoritos((prev) => {
+      // Verifica se a foto já está nos favoritos pelo ID
+      const isFavorito = prev.some((favorito) => favorito.id === foto.id);
+
+      return isFavorito
+        ? prev.filter((favorito) => favorito.id !== foto.id)
+        : [...prev, foto];
+    });
   };
 
   const fotosFiltradas = tagSelecionada
     ? fotos.filter((foto) => foto.tagId === tagSelecionada)
     : fotos;
+
+  const isFavorito = (foto) => {
+    return favoritos.some((favorito) => favorito.id === foto.id);
+  };
 
   return (
     <>
@@ -44,7 +53,6 @@ const Galeria = ({ fotos }) => {
           <h1>Navegue pela galeria</h1>
           <GridFotos>
             {fotosFiltradas.map((foto) => {
-              const isFavorito = favoritos.includes(foto.id);
               return (
                 <CardFoto key={foto.id}>
                   <img
@@ -58,10 +66,10 @@ const Galeria = ({ fotos }) => {
                   </DivInfo>
                   <IconesContainer>
                     <IconesWrapper
-                      onClick={() => handleFavoritar(foto.id)}
-                      $favoritado={isFavorito}
+                      onClick={() => handleFavoritar(foto)}
+                      $favoritado={isFavorito(foto)}
                     >
-                      {isFavorito ? <FaHeart /> : <FaRegHeart />}
+                      {isFavorito(foto) ? <FaHeart /> : <FaRegHeart />}
                     </IconesWrapper>
                     <IconesWrapper onClick={() => setFotoAmpliada(foto)}>
                       <FaExpand />
@@ -78,7 +86,7 @@ const Galeria = ({ fotos }) => {
             foto={fotoAmpliada}
             onClose={() => setFotoAmpliada(null)}
             onFavoritar={handleFavoritar}
-            isFavorito={favoritos.includes(fotoAmpliada.id)}
+            isFavorito={isFavorito(fotoAmpliada)}
           />
         )}
       </GaleriaConteiner>
