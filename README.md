@@ -1,9 +1,9 @@
 # Nome do Projeto (ex: Galeria Espacial)
 
 Uma galeria interativa de fotos do espaço com sistema de filtros e favoritos, desenvolvida com React.
-Projeto fictício feito pela plataforma digital Alura, com algumas modificações autorais que achei pertinente.
+Projeto fictício feito pela plataforma digital Alura, com algumas modificações autorais.
 
-![Preview](./preview-gif.gif)
+![Demo](./public/preview-gif.gif)
 
 ## 🚀 Funcionalidades Principais
 
