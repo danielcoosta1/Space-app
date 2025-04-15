@@ -15,7 +15,7 @@ import tags from "./Tags/tags.json";
 import { useState } from "react";
 
 import { FaHeart, FaRegHeart, FaExpand } from "react-icons/fa";
-import ModalAmpliar from "../ModalAmpliar";
+import ModalAmpliar from "./ModalAmpliar";
 
 const Galeria = ({ fotos }) => {
   const [tagSelecionada, setTagSelecionada] = useState(0);
