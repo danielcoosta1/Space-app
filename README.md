@@ -1,11 +1,9 @@
 # Nome do Projeto (ex: Galeria Espacial)
 
-[![Demo](https://img.shields.io/badge/Live_Demo-7B78E5?style=for-the-badge)](link-do-deploy)
-[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react)](https://react.dev/)
-
 Uma galeria interativa de fotos do espaço com sistema de filtros e favoritos, desenvolvida com React.
+Projeto fictício feito pela plataforma digital Alura, com algumas modificações autorais que achei pertinente.
 
-![Preview](./preview.gif)
+![Preview](./preview-gif.gif)
 
 ## 🚀 Funcionalidades Principais
 
