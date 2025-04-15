@@ -24,6 +24,7 @@ const GridFotos = styled.div`
 `;
 
 const CardFoto = styled.div`
+  position: relative;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   &:hover {
     transform: translateY(-5px);
@@ -32,12 +33,19 @@ const CardFoto = styled.div`
     width: 100%;
     height: 300px;
     object-fit: cover;
+    border-radius: 15px 15px 0 0;
   }
 `;
 
 const DivInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem;
   color: #ffffff;
   background: #001634;
+  border-radius: 0px 0px 20px 20px;
+  min-height: 80px;
 
   h3 {
     font-size: 1.1rem;
@@ -49,4 +57,45 @@ const DivInfo = styled.div`
   }
 `;
 
-export { GaleriaConteiner, SecaoFluida, GridFotos, CardFoto, DivInfo };
+const IconesContainer = styled.div`
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+
+  z-index: 2;
+`;
+
+const IconesWrapper = styled.button`
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${(props) => (props.$favoritado ? "#FF4081" : "#FFFFFF")};
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.9);
+    transform: scale(1.1);
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+`;
+
+export {
+  GaleriaConteiner,
+  SecaoFluida,
+  GridFotos,
+  CardFoto,
+  DivInfo,
+  IconesContainer,
+  IconesWrapper,
+};
